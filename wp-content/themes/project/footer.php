@@ -27,11 +27,6 @@
 			<div class="site-footer-inner">
 
 				<?php
-				/**
-				 * Fires inside the `<footer>` element.
-				 *
-				 * @since 1.0.0
-				 */
 				do_action( 'primer_footer' );
 				?>
 
@@ -39,6 +34,7 @@
 
 		</footer><!-- #colophon -->
 
+		<!--
 		<?php
 		/**
 		 * Fires after the `<footer>` element.
@@ -49,7 +45,7 @@
 		?>
 
 	</div><!-- #page -->
-
+	<div id="footer-text">Copyright 2016 - Haile Jewelry & Loans</div>
 	<?php wp_footer(); ?>
 
 </body>
