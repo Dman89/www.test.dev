@@ -1072,3 +1072,13 @@ img.mfp-img {
     display: block;
     margin: auto;
 }
+
+table.countdown {
+  width: 100%;
+}
+table.countdown tr, table.countdown th {
+  text-align: center;
+}
+table.countdown tr {
+  font-size: 2em;
+}

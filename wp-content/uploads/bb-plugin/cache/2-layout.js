@@ -1112,4 +1112,71 @@ var wpAjaxUrl = 'http://www.test.dev/wp-admin/admin-ajax.php';var flBuilderUrl =
 		FLBuilderLayout.init();
 	});
 
-})(jQuery);
+})(jQuery);var setEndTime = [12, 25],
+endtime = "";
+
+function addZero(input, cb) {
+  if (input <= 9) {
+    cb("0"+input)
+  }
+  else {
+    cb(input)
+  }
+}
+
+function setDom(d,h,m,s) {
+  var timeCount = d+":"+h+":"+m+":"+s;
+  document.getElementById("countdown").innerHTML = timeCount;
+}
+
+function setYear(cb) {
+  var checkMonth = Date().slice(4,7);
+  var checkDay = parseInt(Date().slice(8,10))
+  var year = parseInt(Date().slice(11,15));
+  if (checkMonth == "Dec") {
+    if (checkDay >= 25) {
+      year += 1;
+    }
+  }
+  cb(year);
+}
+
+function ChristmasCountdown(endtime, cb) {
+  var timeLeft = Date.parse(endtime, cb) - Date.parse(new Date());
+  var seconds = Math.floor( (timeLeft/1000) % 60 );
+  var minutes = Math.floor( (timeLeft/1000/60) % 60 );
+  var hours = Math.floor( (timeLeft/(1000*60*60)) % 24 );
+  var days = Math.floor( timeLeft/(1000*60*60*24) );
+  addZero(days, function(da){
+    days = da;
+    addZero(hours, function(ho){
+      hours = ho;
+      addZero(minutes, function(mi){
+        minutes = mi;
+        addZero(seconds, function(se){
+          seconds = se;
+          cb({
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+          });
+        })
+      })
+    })
+  })
+}
+
+
+
+function countdown() {
+  setYear(function(year) {
+    endtime = year + "-" + setEndTime[0] + "-" + setEndTime[1];
+    ChristmasCountdown(endtime, function(time) {
+      setDom(time.days, time.hours, time.minutes, time.seconds);
+    })
+  })
+}
+
+setInterval(countdown, 1000)
+var x = 1
