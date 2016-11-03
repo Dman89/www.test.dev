@@ -984,8 +984,16 @@ img.mfp-img {
 
 
 
-.fl-node-5812441d95904 {
-	width: 59.99%;
+
+
+
+
+
+
+
+
+.fl-node-581a8f82dc97b {
+	width: 100%;
 }
 
 
@@ -999,8 +1007,8 @@ img.mfp-img {
 
 		
 		
-.fl-node-5812441d9590f {
-	width: 40.01%;
+.fl-node-5812441d95904 {
+	width: 100%;
 }
 
 
@@ -1063,4 +1071,14 @@ img.mfp-img {
     text-align: center;
     display: block;
     margin: auto;
+}
+
+table.countdown {
+  width: 100%;
+}
+table.countdown tr, table.countdown th {
+  text-align: center;
+}
+table.countdown tr {
+  font-size: 2em;
 }
