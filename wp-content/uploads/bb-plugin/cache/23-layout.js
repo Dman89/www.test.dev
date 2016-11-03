@@ -1112,4 +1112,4 @@ var wpAjaxUrl = 'http://www.test.dev/wp-admin/admin-ajax.php';var flBuilderUrl =
 		FLBuilderLayout.init();
 	});
 
-})(jQuery);; if(typeof FLBuilder !== 'undefined' && typeof FLBuilder._renderLayoutComplete !== 'undefined') FLBuilder._renderLayoutComplete();
+})(jQuery);
