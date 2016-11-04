@@ -2252,4 +2252,33 @@ width: 100%;
 img#email {
   background-color: white;
 }
+aside {
+border-radius: 4px;
+}
+#gpr_widget-2 {
+background-color: #7c7c7c;
+color: white;
+}
 
+#gpr_widget-2 {
+background-color: #7c7c7c;
+color: white;
+}
+
+#gpr_widget-2  span {
+color: #014a83;
+}
+
+#gpr_widget-2 .gpr-rating-value span {
+color: white;
+}
+img, article {
+border-radius: 4px;
+}
+img.gpr-google-logo-header {
+background-color: white;
+padding: 1px 2px;
+}
+.page-title-container {
+    display: none;
+}

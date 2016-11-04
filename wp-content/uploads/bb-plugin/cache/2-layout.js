@@ -1142,7 +1142,7 @@ function setYear(cb) {
 }
 
 function ChristmasCountdown(endtime, cb) {
-  var timeLeft = Date.parse(endtime, cb) - Date.parse(new Date());
+  var timeLeft = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor( (timeLeft/1000) % 60 );
   var minutes = Math.floor( (timeLeft/1000/60) % 60 );
   var hours = Math.floor( (timeLeft/(1000*60*60)) % 24 );
