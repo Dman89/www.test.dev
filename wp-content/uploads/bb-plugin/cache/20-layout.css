@@ -1157,7 +1157,7 @@ img.mfp-img {
 
 		
 		
-.page-title-container {
+.page-title-container, .site-title-wrapper {
     display: none;
 }
 
@@ -1167,6 +1167,10 @@ img.mfp-img {
 .huge_it_slideshow_description_text_1 {
     text-align: center!important;
     border-radius: 4px!important;
+}
+
+#text-7 {
+    padding: 20px 0!important;
 }
 .page-title-container {
     display: none;

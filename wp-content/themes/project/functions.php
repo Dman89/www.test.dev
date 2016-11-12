@@ -506,6 +506,26 @@ function primer_has_active_categories_reset() {
 	delete_transient( 'primer_has_active_categories' );
 
 }
+
+/**
+ * Ensure the hero widget persists across all pages
+ *
+ * @author GoDaddy
+ *
+ * @return mixed  Hero widget markup.
+ */
+function godaddy_persistent_hero() {
+
+    if ( ! is_front_page() && is_active_sidebar( 'hero' ) ) {
+
+        dynamic_sidebar( 'hero' );
+
+    }
+
+}
+add_action( 'primer_hero', 'godaddy_persistent_hero' );
+
+
 add_action( 'create_category', 'primer_has_active_categories_reset' );
 add_action( 'edit_category',   'primer_has_active_categories_reset' );
 add_action( 'delete_category', 'primer_has_active_categories_reset' );
